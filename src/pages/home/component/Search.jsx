@@ -65,7 +65,13 @@ const Search = () => {
       filter: 'default'
     } };
 
-    dispatch(fetchData(payload));
+    // avoiding race condition
+    const cacheKey = `${payload.params.page}_${payload.params.tagged}`;
+
+    if (localStorage.getItem(cacheKey) === null) {
+      localStorage.setItem(cacheKey, 'true');
+      dispatch(fetchData(payload));
+    }
   };
 
   const fetchSearchData = useCallback(debounce((value) => {
