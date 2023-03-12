@@ -1,0 +1,32 @@
+.trending {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  overflow-x: auto;
+  background-color: white;
+
+  &__title {
+    font-size: 2em;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      padding: 12px 8px;
+      border: 2px solid $primary-color;
+      border-radius: 8px;
+      background-color: white;
+      cursor: pointer;
+
+      &:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      &--selected {
+        background-color: #b8d7e4;
+      }
+    }
+  }
+}
