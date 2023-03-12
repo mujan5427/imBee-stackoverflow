@@ -2,7 +2,6 @@ import {
   createSlice, createAsyncThunk
 } from '@reduxjs/toolkit';
 import { getQuestionList } from '@/service/question';
-import mockData from '@/service/mock-question.json';
 import _ from 'lodash';
 
 const initialState = {

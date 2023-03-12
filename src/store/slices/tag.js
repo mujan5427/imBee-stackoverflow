@@ -2,7 +2,6 @@ import {
   createSlice, createAsyncThunk
 } from '@reduxjs/toolkit';
 import { getTagListAPI } from '@/service/tag';
-import mockData from '@/service/mock-tag.json';
 import _ from 'lodash';
 
 const initialState = {
